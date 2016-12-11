@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar text-center>
+    <ion-toolbar>
+      <ion-buttons left>
+        <button ion-button icon-only color="royal">
+        <ion-icon name="ios-pin"></ion-icon>
+      </button>
+      </ion-buttons>
+      <ion-title>Send To...</ion-title>
+      <ion-buttons right>
+        <button ion-button icon-only color="royal">
+        <ion-icon name="md-qr-scanner"></ion-icon>
+      </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-navbar>
+</ion-header>
+<ion-content class="dashboard-page">
+  <banner [banner]="banner"></banner>
+  <home-cell [cell]="cell"></home-cell>
+  <banner [banner]="ad"></banner>
+</ion-content>
