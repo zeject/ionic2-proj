@@ -4,12 +4,16 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { DashboardPage } from '../pages/home/dashboard';
 import { ComponentsModule } from '../components/components.module';
+import { StorePage } from '../pages/store/store';
+import { CartPage } from '../pages/cart/cart';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    DashboardPage
+    DashboardPage,
+    StorePage,
+    CartPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -19,7 +23,9 @@ import { ComponentsModule } from '../components/components.module';
   entryComponents: [
     MyApp,
     HomePage,
-    DashboardPage
+    DashboardPage,
+    StorePage,
+    CartPage
   ],
   providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
 })
