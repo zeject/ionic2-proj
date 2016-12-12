@@ -6,6 +6,7 @@ import { DashboardPage } from '../pages/home/dashboard';
 import { ComponentsModule } from '../components/components.module';
 import { StorePage } from '../pages/store/store';
 import { CartPage } from '../pages/cart/cart';
+import { MyPage } from '../pages/my/my';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { CartPage } from '../pages/cart/cart';
     HomePage,
     DashboardPage,
     StorePage,
-    CartPage
+    CartPage,
+    MyPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -25,7 +27,8 @@ import { CartPage } from '../pages/cart/cart';
     HomePage,
     DashboardPage,
     StorePage,
-    CartPage
+    CartPage,
+    MyPage
   ],
   providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
 })
