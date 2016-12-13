@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, ViewChild, OnInit } from '@angular/core';
+import { NavController, Content } from 'ionic-angular';
 
 /*
   Generated class for the Cart page.
@@ -11,12 +11,24 @@ import { NavController } from 'ionic-angular';
   selector: 'page-cart',
   templateUrl: 'cart.html'
 })
-export class CartPage {
+export class CartPage implements OnInit {
+  @ViewChild(Content) content: Content;
 
-  constructor(public navCtrl: NavController) {}
+  showFab = false;
+  constructor(public navCtrl: NavController) { }
 
-  ionViewDidLoad() {
-    console.log('Hello CartPage Page');
+  ngOnInit(): void {
   }
 
+  onScrollChange(e) {
+    console.log(e);
+    if (this.content.getScrollTop() > 500) {
+      this.showFab = true;
+    }
+  }
+
+  scrollTo() {
+    this.content.scrollToTop();
+    this.showFab = false;
+  }
 }

@@ -7,6 +7,7 @@ import { ComponentsModule } from '../components/components.module';
 import { StorePage } from '../pages/store/store';
 import { CartPage } from '../pages/cart/cart';
 import { MyPage } from '../pages/my/my';
+import { ScrollDirective } from '../directive/scroll.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MyPage } from '../pages/my/my';
     DashboardPage,
     StorePage,
     CartPage,
-    MyPage
+    MyPage,
+    ScrollDirective
   ],
   imports: [
     IonicModule.forRoot(MyApp),

@@ -9,7 +9,10 @@
     <ion-title>Cart</ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content>
+<ion-content scrollChange (onScrollChange)="onScrollChange($event)">
   <carts></carts>
   <product-list></product-list>
+  <ion-fab bottom right (click)="scrollTo()">
+    <button ion-fab mini><ion-icon name="arrow-up"></ion-icon></button>
+  </ion-fab>
 </ion-content>
