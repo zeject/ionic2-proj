@@ -1,4 +1,4 @@
-import { Directive, HostListener, ElementRef, Input, EventEmitter, Output } from '@angular/core';
+import { Directive, HostListener, ElementRef, EventEmitter, Output } from '@angular/core';
 
 @Directive({
     selector: '[scrollChange]'
