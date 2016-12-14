@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-segment [(ngModel)]="page">
+      <ion-segment-button value="goodsPics">
+        图片
+      </ion-segment-button>
+      <ion-segment-button value="msg">
+        详情
+      </ion-segment-button>
+    </ion-segment>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div [ngSwitch]="page">
+    <div *ngSwitchCase="'goodsPics'">
+      <img src="assets/img/banner.jpg" alt="">
+    </div>
+    <ion-list *ngSwitchCase="'msg'">
+      <ion-item>
+        <ion-thumbnail item-left>
+          <img src="img/thumbnail-kitten-1.jpg">
+        </ion-thumbnail>
+        <h2>Luna</h2>
+      </ion-item>
+      ...
+    </ion-list>
+  </div>
+</ion-content>

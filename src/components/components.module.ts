@@ -7,6 +7,7 @@ import { ProductListComponent } from './product-list/product-list';
 import { ProductItemComponent } from './product-item/product-item';
 import { CartsComponent } from './carts/carts';
 import { CartItemComponent } from './carts/cart-item/cart-item';
+import { GoodsDetailComponent } from './goods-detail/goods-detail';
 
 @NgModule({
     imports: [
@@ -27,7 +28,11 @@ import { CartItemComponent } from './carts/cart-item/cart-item';
         ProductListComponent,
         ProductItemComponent,
         CartsComponent,
-        CartItemComponent
+        CartItemComponent,
+        GoodsDetailComponent
+    ],
+    entryComponents: [
+        GoodsDetailComponent
     ],
     providers: []
 })

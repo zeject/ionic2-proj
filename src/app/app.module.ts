@@ -8,6 +8,7 @@ import { StorePage } from '../pages/store/store';
 import { CartPage } from '../pages/cart/cart';
 import { MyPage } from '../pages/my/my';
 import { ScrollDirective } from '../directive/scroll.directive';
+import { GoodsDetailComponent } from '../components/goods-detail/goods-detail';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,12 @@ import { ScrollDirective } from '../directive/scroll.directive';
     ScrollDirective
   ],
   imports: [
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {}, {
+      links: [
+        { component: HomePage, name: 'Home', segment: 'home' },
+        { component: GoodsDetailComponent, name: 'Goods', segment: 'goods' }
+      ]
+    }),
     ComponentsModule
   ],
   bootstrap: [IonicApp],

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { GoodsDetailComponent } from '../goods-detail/goods-detail';
+import { NavController } from 'ionic-angular';
 
 /*
   Generated class for the ProductItem component.
@@ -12,11 +14,9 @@ import { Component } from '@angular/core';
 })
 export class ProductItemComponent {
 
-  text: string;
 
-  constructor() {
-    console.log('Hello ProductItem Component');
-    this.text = 'Hello World';
+  constructor(public navCtrl: NavController) { }
+  goToDetail() {
+    this.navCtrl.push(GoodsDetailComponent, {}, { animate: true });
   }
-
 }

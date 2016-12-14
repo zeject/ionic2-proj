@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, NavParams, Tabs } from 'ionic-angular';
 import { DashboardPage } from './dashboard';
 import { StorePage } from '../store/store';
 import { CartPage } from '../cart/cart';
@@ -13,10 +13,16 @@ export class HomePage {
   tabTwo = StorePage;
   tabThree = CartPage;
   tabFour = MyPage;
-  constructor(public navCtrl: NavController) { }
+
+  @ViewChild('myTabs') tabRef: Tabs;
+  tabId: number;
+  constructor(public navCtrl: NavController, public params: NavParams) {
+    var that = this;
+    this.tabId = params.get("tabId");
+  }
 
   ionViewDidLoad() {
-    console.log('Hello HomePage Page');
+    // this.tabRef.select(+this.tabId || 0);
   }
 
 }
