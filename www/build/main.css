@@ -21800,6 +21800,14 @@ carts .line span::after {
   top: 0.4em;
 }
 
+goods-detail .bar-button-md[icon-only].buy {
+  padding: 0 2em;
+}
+
+goods-detail .price {
+  font-size: 1.8rem;
+}
+
 home-cell .user-cell {
   background: #FFF;
   text-align: center;
