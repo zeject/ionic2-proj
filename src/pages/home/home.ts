@@ -17,7 +17,6 @@ export class HomePage {
   @ViewChild('myTabs') tabRef: Tabs;
   tabId: number;
   constructor(public navCtrl: NavController, public params: NavParams) {
-    var that = this;
     this.tabId = params.get("tabId");
   }
 
